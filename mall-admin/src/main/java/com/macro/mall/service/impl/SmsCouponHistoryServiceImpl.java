@@ -20,7 +20,7 @@ import java.util.List;
 public class SmsCouponHistoryServiceImpl implements SmsCouponHistoryService {
     @Resource
     private SmsCouponHistoryMapper historyMapper;
-    @Resource
+    @Override
     public List<SmsCouponHistory> list(Long couponId, Integer useStatus, String orderSn, Integer pageSize, Integer pageNum) {
         PageHelper.startPage(pageNum,pageSize);
         SmsCouponHistoryExample example = new SmsCouponHistoryExample();

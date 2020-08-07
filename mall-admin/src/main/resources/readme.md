@@ -1,0 +1,9 @@
+AuthenticationEntryPoint:
+该类用来统一处理 AuthenticationException 异常，AuthenticationException是在用户认证的时候出现错误时抛出的异常。
+系统用户不存在，被锁定，凭证失效，密码错误等认证过程中出现的异常都由AuthenticationException处理
+
+
+AccessDeniedHandler:
+该类用来统一处理AccessDeniedException异常，AccessDeniedException主要是在用户在访问受保护资源时被拒绝而抛出的
+异常。
+

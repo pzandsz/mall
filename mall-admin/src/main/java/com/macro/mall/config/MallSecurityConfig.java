@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,11 +27,12 @@ import java.util.concurrent.ConcurrentHashMap;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MallSecurityConfig extends SecurityConfig {
 
-    @Autowired
+    @Resource
     private UmsAdminService adminService;
-    @Autowired
+    @Resource
     private UmsResourceService resourceService;
 
+    @Override
     @Bean
     public UserDetailsService userDetailsService() {
         //获取登录用户信息
