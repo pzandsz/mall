@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,7 +41,7 @@ public class OssServiceImpl implements OssService {
 	@Value("${aliyun.oss.dir.prefix}")
 	private String ALIYUN_OSS_DIR_PREFIX;
 
-	@Autowired
+	@Resource
 	private OSSClient ossClient;
 
 	/**

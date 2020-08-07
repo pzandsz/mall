@@ -10,6 +10,7 @@ import com.macro.mall.service.UmsResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
@@ -19,9 +20,9 @@ import java.util.List;
  */
 @Service
 public class UmsResourceServiceImpl implements UmsResourceService {
-    @Autowired
+    @Resource
     private UmsResourceMapper resourceMapper;
-    @Autowired
+    @Resource
     private UmsAdminCacheService adminCacheService;
     @Override
     public int create(UmsResource umsResource) {

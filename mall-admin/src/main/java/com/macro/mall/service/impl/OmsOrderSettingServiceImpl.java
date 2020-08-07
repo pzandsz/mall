@@ -6,13 +6,15 @@ import com.macro.mall.service.OmsOrderSettingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * 订单设置管理Service实现类
  * Created by macro on 2018/10/16.
  */
 @Service
 public class OmsOrderSettingServiceImpl implements OmsOrderSettingService {
-    @Autowired
+    @Resource
     private OmsOrderSettingMapper orderSettingMapper;
 
     @Override

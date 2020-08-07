@@ -7,6 +7,7 @@ import com.macro.mall.service.CmsPrefrenceAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ import java.util.List;
  */
 @Service
 public class CmsPrefrenceAreaServiceImpl implements CmsPrefrenceAreaService {
-    @Autowired
+    @Resource
     private CmsPrefrenceAreaMapper prefrenceAreaMapper;
 
     @Override

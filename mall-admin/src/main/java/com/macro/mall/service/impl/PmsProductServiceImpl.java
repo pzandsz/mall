@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,39 +31,39 @@ import java.util.stream.Collectors;
 @Service
 public class PmsProductServiceImpl implements PmsProductService {
     private static final Logger LOGGER = LoggerFactory.getLogger(PmsProductServiceImpl.class);
-    @Autowired
+    @Resource
     private PmsProductMapper productMapper;
-    @Autowired
+    @Resource
     private PmsMemberPriceDao memberPriceDao;
-    @Autowired
+    @Resource
     private PmsMemberPriceMapper memberPriceMapper;
-    @Autowired
+    @Resource
     private PmsProductLadderDao productLadderDao;
-    @Autowired
+    @Resource
     private PmsProductLadderMapper productLadderMapper;
-    @Autowired
+    @Resource
     private PmsProductFullReductionDao productFullReductionDao;
-    @Autowired
+    @Resource
     private PmsProductFullReductionMapper productFullReductionMapper;
-    @Autowired
+    @Resource
     private PmsSkuStockDao skuStockDao;
-    @Autowired
+    @Resource
     private PmsSkuStockMapper skuStockMapper;
-    @Autowired
+    @Resource
     private PmsProductAttributeValueDao productAttributeValueDao;
-    @Autowired
+    @Resource
     private PmsProductAttributeValueMapper productAttributeValueMapper;
-    @Autowired
+    @Resource
     private CmsSubjectProductRelationDao subjectProductRelationDao;
-    @Autowired
+    @Resource
     private CmsSubjectProductRelationMapper subjectProductRelationMapper;
-    @Autowired
+    @Resource
     private CmsPrefrenceAreaProductRelationDao prefrenceAreaProductRelationDao;
-    @Autowired
+    @Resource
     private CmsPrefrenceAreaProductRelationMapper prefrenceAreaProductRelationMapper;
-    @Autowired
+    @Resource
     private PmsProductDao productDao;
-    @Autowired
+    @Resource
     private PmsProductVertifyRecordDao productVertifyRecordDao;
 
     @Override

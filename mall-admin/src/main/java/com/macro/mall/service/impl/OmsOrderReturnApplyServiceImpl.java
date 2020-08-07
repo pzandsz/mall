@@ -12,6 +12,7 @@ import com.macro.mall.service.OmsOrderReturnApplyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
@@ -21,9 +22,9 @@ import java.util.List;
  */
 @Service
 public class OmsOrderReturnApplyServiceImpl implements OmsOrderReturnApplyService {
-    @Autowired
+    @Resource
     private OmsOrderReturnApplyDao returnApplyDao;
-    @Autowired
+    @Resource
     private OmsOrderReturnApplyMapper returnApplyMapper;
     @Override
     public List<OmsOrderReturnApply> list(OmsReturnApplyQueryParam queryParam, Integer pageSize, Integer pageNum) {

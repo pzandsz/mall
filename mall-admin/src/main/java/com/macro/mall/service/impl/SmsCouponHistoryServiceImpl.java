@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,9 +18,9 @@ import java.util.List;
  */
 @Service
 public class SmsCouponHistoryServiceImpl implements SmsCouponHistoryService {
-    @Autowired
+    @Resource
     private SmsCouponHistoryMapper historyMapper;
-    @Override
+    @Resource
     public List<SmsCouponHistory> list(Long couponId, Integer useStatus, String orderSn, Integer pageSize, Integer pageNum) {
         PageHelper.startPage(pageNum,pageSize);
         SmsCouponHistoryExample example = new SmsCouponHistoryExample();

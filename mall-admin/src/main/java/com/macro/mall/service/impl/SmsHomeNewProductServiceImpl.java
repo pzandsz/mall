@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
  */
 @Service
 public class SmsHomeNewProductServiceImpl implements SmsHomeNewProductService {
-    @Autowired
+    @Resource
     private SmsHomeNewProductMapper homeNewProductMapper;
     @Override
     public int create(List<SmsHomeNewProduct> homeNewProductList) {

@@ -33,6 +33,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Date;
@@ -46,23 +47,23 @@ import java.util.stream.Collectors;
 @Service
 public class UmsAdminServiceImpl implements UmsAdminService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UmsAdminServiceImpl.class);
-    @Autowired
+    @Resource
     private JwtTokenUtil jwtTokenUtil;
-    @Autowired
+    @Resource
     private PasswordEncoder passwordEncoder;
-    @Autowired
+    @Resource
     private UmsAdminMapper adminMapper;
-    @Autowired
+    @Resource
     private UmsAdminRoleRelationMapper adminRoleRelationMapper;
-    @Autowired
+    @Resource
     private UmsAdminRoleRelationDao adminRoleRelationDao;
-    @Autowired
+    @Resource
     private UmsAdminPermissionRelationMapper adminPermissionRelationMapper;
-    @Autowired
+    @Resource
     private UmsAdminPermissionRelationDao adminPermissionRelationDao;
-    @Autowired
+    @Resource
     private UmsAdminLoginLogMapper loginLogMapper;
-    @Autowired
+    @Resource
     private UmsAdminCacheService adminCacheService;
 
     @Override

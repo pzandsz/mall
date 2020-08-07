@@ -14,6 +14,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,11 +23,11 @@ import java.util.List;
  */
 @Service
 public class PmsProductAttributeServiceImpl implements PmsProductAttributeService {
-    @Autowired
+    @Resource
     private PmsProductAttributeMapper productAttributeMapper;
-    @Autowired
+    @Resource
     private PmsProductAttributeCategoryMapper productAttributeCategoryMapper;
-    @Autowired
+    @Resource
     private PmsProductAttributeDao productAttributeDao;
 
     @Override

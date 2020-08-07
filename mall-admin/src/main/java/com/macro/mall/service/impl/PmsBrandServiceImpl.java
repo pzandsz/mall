@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,9 +23,9 @@ import java.util.List;
  */
 @Service
 public class PmsBrandServiceImpl implements PmsBrandService {
-    @Autowired
+    @Resource
     private PmsBrandMapper brandMapper;
-    @Autowired
+    @Resource
     private PmsProductMapper productMapper;
 
     @Override
