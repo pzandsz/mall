@@ -106,7 +106,9 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         String token = null;
         //密码需要客户端加密后传递
         try {
+            //通过用户名获取用户信息 此处应当有缓存
             UserDetails userDetails = loadUserByUsername(username);
+            //校验密码
             if(!passwordEncoder.matches(password,userDetails.getPassword())){
                 throw new BadCredentialsException("密码不正确");
             }

@@ -17,6 +17,16 @@ import java.util.Iterator;
  */
 public class DynamicAccessDecisionManager implements AccessDecisionManager {
 
+    /**
+     *
+     * @param authentication: 接口，用于表示用户认证信息，在用户登录认证之前相关信息会封装为一个
+     *                      Authentication具体实现类的对象，在登录认证成功之后又会生成一个信息更
+     *                      全面，包含用户权限等信息的Authentication对象
+     * @param object
+     * @param configAttributes
+     * @throws AccessDeniedException
+     * @throws InsufficientAuthenticationException
+     */
     @Override
     public void decide(Authentication authentication, Object object,
                        Collection<ConfigAttribute> configAttributes) throws AccessDeniedException, InsufficientAuthenticationException {
@@ -29,12 +39,14 @@ public class DynamicAccessDecisionManager implements AccessDecisionManager {
             ConfigAttribute configAttribute = iterator.next();
             //将访问所需资源或用户拥有资源进行比对
             String needAuthority = configAttribute.getAttribute();
+            //GrantedAuthority:
             for (GrantedAuthority grantedAuthority : authentication.getAuthorities()) {
                 if (needAuthority.trim().equals(grantedAuthority.getAuthority())) {
                     return;
                 }
             }
         }
+        System.out.println("抱歉，您没有访问权限");
         throw new AccessDeniedException("抱歉，您没有访问权限");
     }
 

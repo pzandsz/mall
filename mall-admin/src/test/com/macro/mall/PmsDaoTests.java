@@ -17,6 +17,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +25,9 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PmsDaoTests {
-    @Autowired
+    @Resource
     private PmsMemberPriceDao memberPriceDao;
-    @Autowired
+    @Resource
     private PmsProductDao productDao;
     private static final Logger LOGGER = LoggerFactory.getLogger(PmsDaoTests.class);
     @Test
