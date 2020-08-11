@@ -34,6 +34,8 @@ public class DynamicAccessDecisionManager implements AccessDecisionManager {
         if (CollUtil.isEmpty(configAttributes)) {
             return;
         }
+        //为authentication中的authorities设置权限的方法
+
         Iterator<ConfigAttribute> iterator = configAttributes.iterator();
         while (iterator.hasNext()) {
             ConfigAttribute configAttribute = iterator.next();
