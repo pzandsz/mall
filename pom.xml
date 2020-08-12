@@ -18,7 +18,13 @@
         <module>mall-search</module>
         <module>mall-portal</module>
     </modules>
-
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Internal repo</name>
+            <url>file:D:\repository</url>
+        </repository>
+    </distributionManagement>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

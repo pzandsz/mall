@@ -9,7 +9,13 @@
 
     <name>mall-admin</name>
     <description>mall-admin project for mall</description>
-
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Internal repo</name>
+            <url>file:D:\repository</url>
+        </repository>
+    </distributionManagement>
     <parent>
         <groupId>com.macro.mall</groupId>
         <artifactId>mall</artifactId>
