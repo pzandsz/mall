@@ -35,6 +35,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -48,11 +49,11 @@ import java.util.Map;
 @Service
 public class EsProductServiceImpl implements EsProductService {
     private static final Logger LOGGER = LoggerFactory.getLogger(EsProductServiceImpl.class);
-    @Autowired
+    @Resource
     private EsProductDao productDao;
-    @Autowired
+    @Resource
     private EsProductRepository productRepository;
-    @Autowired
+    @Resource
     private ElasticsearchTemplate elasticsearchTemplate;
     @Override
     public int importAll() {
