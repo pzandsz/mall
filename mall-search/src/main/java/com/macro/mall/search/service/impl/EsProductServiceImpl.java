@@ -272,6 +272,7 @@ public class EsProductServiceImpl implements EsProductService {
             }
             attrList.add(attr);
         }
+
         productRelatedInfo.setProductAttrs(attrList);
         return productRelatedInfo;
     }
