@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>bundle</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>../target</directory>
+            <outputDirectory>mall</outputDirectory>
+            <includes>
+                <include>mall-search.jar</include>
+            </includes>
+            <fileMode>0755</fileMode>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <source>../script/run.sh</source>
+            <outputDirectory>mall</outputDirectory>
+            <destName>run.sh</destName>
+            <fileMode>0755</fileMode>
+        </file>
+        <file>
+            <source>../script/args.sh</source>
+            <outputDirectory>mall</outputDirectory>
+            <destName>args.sh</destName>
+            <fileMode>0755</fileMode>
+        </file>
+    </files>
+</assembly>
