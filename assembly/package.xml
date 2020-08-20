@@ -11,7 +11,7 @@
             <directory>../target</directory>
             <outputDirectory>mall</outputDirectory>
             <includes>
-                <include>mall-search.jar</include>
+                <include>mall.jar</include>
             </includes>
             <fileMode>0755</fileMode>
         </fileSet>
