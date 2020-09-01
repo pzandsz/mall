@@ -39,11 +39,21 @@ public class MallSecurityConfig extends SecurityConfig {
         return username -> adminService.loadUserByUsername(username);
     }
 
+    /**
+     * DynamicSecurityService实现类
+     * @return
+     */
     @Bean
     public DynamicSecurityService dynamicSecurityService() {
         return new DynamicSecurityService() {
+            /**
+             *
+             * 加载
+             * @return
+             */
             @Override
             public Map<String, ConfigAttribute> loadDataSource() {
+                //获取全部资源，将资源转化为SecurityConfig对象并存入缓存
                 Map<String, ConfigAttribute> map = new ConcurrentHashMap<>();
                 List<UmsResource> resourceList = resourceService.listAll();
                 for (UmsResource resource : resourceList) {

@@ -27,6 +27,7 @@ public class MallSecurityConfig extends SecurityConfig {
     @Autowired
     private UmsMemberService memberService;
 
+    @Override
     @Bean
     public UserDetailsService userDetailsService() {
         //获取登录用户信息
