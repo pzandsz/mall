@@ -20,22 +20,23 @@ public class WanggeExcelTest {
 
         List<ExcelDomain> domains = new ArrayList<>();
 
-        String prefix="扫楼";
+        String prefix="扫街";
+        String action="查询";
 
-        String shujuyuan="已结束的场外营销列表";
+        String shujuyuan="走访记录商户详情列表";
 
-        String properties="活动名称，活动ID，坐标，活动状态，参与人，创建时间，实际开始扫楼时间，实际结束扫楼时间，扫楼结束状态";
+        String properties="扫街活动ID，扫街活动名称，商户ID，商户名称，联系人名称，联系人电话";
         //1
         domains.add(ExcelDomain.builder()
                 .col0(prefix)
                 .col1("发送者：用户\n" +
                         "接收者：前端系统")
-                .col2("查询"+shujuyuan)
-                .col3("用户点击查询")
-                .col4("查询"+shujuyuan)
-                .col5("筛选"+shujuyuan)
+                .col2(action + shujuyuan)
+                .col3("用户点击"+action)
+                .col4(action + shujuyuan)
+                .col5(action + shujuyuan)
                 .col6("E")
-                .col7(prefix+shujuyuan)
+                .col7(prefix + shujuyuan)
                 .col8(properties)
                 .col9("新增")
                 .col10("1")
@@ -47,7 +48,7 @@ public class WanggeExcelTest {
                 .col2("")
                 .col3("")
                 .col4("")
-                .col5("查询信息输出到服务端")
+                .col5(action + "信息输出到服务端")
                 .col6("X")
                 .col7(prefix+shujuyuan)
                 .col8(properties)
@@ -77,7 +78,7 @@ public class WanggeExcelTest {
                 .col2("")
                 .col3("")
                 .col4("")
-                .col5("前端返回查询结果给用户")
+                .col5("前端返回"+action+"结果给用户")
                 .col6("X")
                 .col7(prefix+shujuyuan)
                 .col8(properties)
@@ -90,10 +91,10 @@ public class WanggeExcelTest {
                 .col0("")
                 .col1("发送者：前端系统\n" +
                         "接收者：服务端网格系统")
-                .col2("查询"+shujuyuan)
+                .col2(action+shujuyuan)
                 .col3("输入触发")
-                .col4("查询"+shujuyuan)
-                .col5("服务端网格系统获取前端查询数据")
+                .col4(action + shujuyuan)
+                .col5("服务端网格系统获取前端请求数据")
                 .col6("E")
                 .col7(prefix+shujuyuan)
                 .col8(properties)
@@ -146,6 +147,6 @@ public class WanggeExcelTest {
 
 
 
-        ExcelUtil.writeExcel(new File("D://test.xlsx"),null);
+        ExcelUtil.writeExcel(new File("C:\\Users\\曾鹏\\Desktop\\cosmic_floor.xlsx"),domains);
     }
 }
